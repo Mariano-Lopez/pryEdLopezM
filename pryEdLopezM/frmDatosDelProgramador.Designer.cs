@@ -61,6 +61,7 @@
             // 
             // fotoDesarrollador
             // 
+            this.fotoDesarrollador.Cursor = System.Windows.Forms.Cursors.Default;
             this.fotoDesarrollador.Image = ((System.Drawing.Image)(resources.GetObject("fotoDesarrollador.Image")));
             this.fotoDesarrollador.Location = new System.Drawing.Point(314, 23);
             this.fotoDesarrollador.Name = "fotoDesarrollador";

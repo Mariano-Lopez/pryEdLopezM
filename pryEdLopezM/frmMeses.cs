@@ -30,19 +30,23 @@ namespace pryEdLopezM
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (txtMes.Text == " ")
+            if (txtMes.Text == " " || numMes.Value > 12 || numMes.Value < 1)
             {
 
-                MessageBox.Show("Faltan cargar datos", "Error de carga");
+                MessageBox.Show("Datos erroneos", "Error de carga");
 
             }
             else
             {
                 string Dato = numMes.Value.ToString() + ";" + txtMes.Text;
                 x.Grabar(Dato);
+
                 x.Recorrer(dgvMes);
+
                 MessageBox.Show("Datos cargados exitosamente","Proceso finalizado");
+
                 txtMes.Text = "";
+
                 numMes.Value = numMes.Value + 1;
 
 
