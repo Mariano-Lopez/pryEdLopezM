@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mspEdDMLopez = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosDelProgramadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,25 +44,30 @@
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructuraNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.mspEdDMLopez.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mspEdDMLopez
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mspEdDMLopez.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.programacionOOToolStripMenuItem,
             this.estructurasLinealesToolStripMenuItem,
             this.estructuraNoLinealesToolStripMenuItem,
             this.baseDeDatosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(667, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mspEdDMLopez.Location = new System.Drawing.Point(0, 0);
+            this.mspEdDMLopez.Name = "mspEdDMLopez";
+            this.mspEdDMLopez.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mspEdDMLopez.Size = new System.Drawing.Size(667, 24);
+            this.mspEdDMLopez.TabIndex = 0;
+            this.mspEdDMLopez.Text = "menuStrip1";
             // 
             // sistemaToolStripMenuItem
             // 
@@ -159,9 +164,46 @@
             // 
             // estructurasLinealesToolStripMenuItem
             // 
+            this.estructurasLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colaToolStripMenuItem,
+            this.pilaToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.listaSimpleToolStripMenuItem,
+            this.listaDobleToolStripMenuItem});
             this.estructurasLinealesToolStripMenuItem.Name = "estructurasLinealesToolStripMenuItem";
             this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.estructurasLinealesToolStripMenuItem.Text = "Estructuras Lineales";
+            // 
+            // colaToolStripMenuItem
+            // 
+            this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.colaToolStripMenuItem.Text = "Cola...";
+            this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
+            // 
+            // pilaToolStripMenuItem
+            // 
+            this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.pilaToolStripMenuItem.Text = "Pila...";
+            this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(143, 6);
+            // 
+            // listaSimpleToolStripMenuItem
+            // 
+            this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.listaSimpleToolStripMenuItem.Text = "Lista Simple...";
+            // 
+            // listaDobleToolStripMenuItem
+            // 
+            this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.listaDobleToolStripMenuItem.Text = "Lista Doble";
             // 
             // estructuraNoLinealesToolStripMenuItem
             // 
@@ -181,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(667, 519);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mspEdDMLopez);
             this.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -189,8 +231,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras de datos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmInicio_Load);
+            this.mspEdDMLopez.ResumeLayout(false);
+            this.mspEdDMLopez.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +241,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mspEdDMLopez;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosDelProgramadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
@@ -215,6 +258,11 @@
         private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
     }
 }
 

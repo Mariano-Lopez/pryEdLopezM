@@ -45,5 +45,22 @@ namespace pryEdLopezM
             frmMeses v = new frmMeses();
             v.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola v = new frmCola();
+            v.ShowDialog();
+        }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila v = new frmPila();
+            v.ShowDialog();
+        }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
