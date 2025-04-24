@@ -43,10 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.mrcLstArbol = new System.Windows.Forms.GroupBox();
+            this.optPostOrder = new System.Windows.Forms.RadioButton();
+            this.optPreOrder = new System.Windows.Forms.RadioButton();
+            this.optInOrder = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.mrcNuevoElemento.SuspendLayout();
             this.mrcEliminarElemento.SuspendLayout();
             this.mrcLstArbol.SuspendLayout();
@@ -184,9 +184,9 @@
             // 
             // mrcLstArbol
             // 
-            this.mrcLstArbol.Controls.Add(this.radioButton3);
-            this.mrcLstArbol.Controls.Add(this.radioButton2);
-            this.mrcLstArbol.Controls.Add(this.radioButton1);
+            this.mrcLstArbol.Controls.Add(this.optPostOrder);
+            this.mrcLstArbol.Controls.Add(this.optPreOrder);
+            this.mrcLstArbol.Controls.Add(this.optInOrder);
             this.mrcLstArbol.Controls.Add(this.dataGridView1);
             this.mrcLstArbol.Location = new System.Drawing.Point(12, 197);
             this.mrcLstArbol.Name = "mrcLstArbol";
@@ -195,6 +195,39 @@
             this.mrcLstArbol.TabStop = false;
             this.mrcLstArbol.Text = "Listado del árbol";
             // 
+            // optPostOrder
+            // 
+            this.optPostOrder.AutoSize = true;
+            this.optPostOrder.Location = new System.Drawing.Point(17, 98);
+            this.optPostOrder.Name = "optPostOrder";
+            this.optPostOrder.Size = new System.Drawing.Size(75, 17);
+            this.optPostOrder.TabIndex = 3;
+            this.optPostOrder.TabStop = true;
+            this.optPostOrder.Text = "Post-Order";
+            this.optPostOrder.UseVisualStyleBackColor = true;
+            // 
+            // optPreOrder
+            // 
+            this.optPreOrder.AutoSize = true;
+            this.optPreOrder.Location = new System.Drawing.Point(17, 63);
+            this.optPreOrder.Name = "optPreOrder";
+            this.optPreOrder.Size = new System.Drawing.Size(70, 17);
+            this.optPreOrder.TabIndex = 2;
+            this.optPreOrder.TabStop = true;
+            this.optPreOrder.Text = "Pre-Order";
+            this.optPreOrder.UseVisualStyleBackColor = true;
+            // 
+            // optInOrder
+            // 
+            this.optInOrder.AutoSize = true;
+            this.optInOrder.Location = new System.Drawing.Point(17, 29);
+            this.optInOrder.Name = "optInOrder";
+            this.optInOrder.Size = new System.Drawing.Size(63, 17);
+            this.optInOrder.TabIndex = 1;
+            this.optInOrder.TabStop = true;
+            this.optInOrder.Text = "In-Order";
+            this.optInOrder.UseVisualStyleBackColor = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -202,39 +235,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(404, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(17, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(17, 63);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(17, 98);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // frmArbolBinario
             // 
@@ -278,9 +278,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEquilibrar;
         private System.Windows.Forms.GroupBox mrcLstArbol;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton optPostOrder;
+        private System.Windows.Forms.RadioButton optPreOrder;
+        private System.Windows.Forms.RadioButton optInOrder;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
