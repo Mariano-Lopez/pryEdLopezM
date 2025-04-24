@@ -15,6 +15,7 @@ namespace pryEdLopezM
         private String nom;
         private String tra;
         private clsNodo sig;
+        private clsNodo ant;
 
 
         //Propiedades del nodo
@@ -37,6 +38,12 @@ namespace pryEdLopezM
         {
             get { return sig; }
             set { sig = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
 
 
