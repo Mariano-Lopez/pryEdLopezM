@@ -69,5 +69,11 @@ namespace pryEdLopezM
             frmListaDoble v = new frmListaDoble();
             v.ShowDialog();
         }
+
+        private void árbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario v = new frmArbolBinario();
+            v.ShowDialog();
+        }
     }
 }

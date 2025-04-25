@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvArbol = new System.Windows.Forms.TreeView();
             this.mrcNuevoElemento = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTraN = new System.Windows.Forms.TextBox();
@@ -46,19 +46,22 @@
             this.optPostOrder = new System.Windows.Forms.RadioButton();
             this.optPreOrder = new System.Windows.Forms.RadioButton();
             this.optInOrder = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvArbolBinario = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcNuevoElemento.SuspendLayout();
             this.mrcEliminarElemento.SuspendLayout();
             this.mrcLstArbol.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbolBinario)).BeginInit();
             this.SuspendLayout();
             // 
-            // treeView1
+            // tvArbol
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 12);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(223, 166);
-            this.treeView1.TabIndex = 0;
+            this.tvArbol.Location = new System.Drawing.Point(12, 12);
+            this.tvArbol.Name = "tvArbol";
+            this.tvArbol.Size = new System.Drawing.Size(223, 166);
+            this.tvArbol.TabIndex = 0;
             // 
             // mrcNuevoElemento
             // 
@@ -85,6 +88,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTraN
             // 
@@ -181,13 +185,14 @@
             this.btnEquilibrar.TabIndex = 8;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // mrcLstArbol
             // 
             this.mrcLstArbol.Controls.Add(this.optPostOrder);
             this.mrcLstArbol.Controls.Add(this.optPreOrder);
             this.mrcLstArbol.Controls.Add(this.optInOrder);
-            this.mrcLstArbol.Controls.Add(this.dataGridView1);
+            this.mrcLstArbol.Controls.Add(this.dgvArbolBinario);
             this.mrcLstArbol.Location = new System.Drawing.Point(12, 197);
             this.mrcLstArbol.Name = "mrcLstArbol";
             this.mrcLstArbol.Size = new System.Drawing.Size(601, 188);
@@ -228,13 +233,32 @@
             this.optInOrder.Text = "In-Order";
             this.optInOrder.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvArbolBinario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(177, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(404, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvArbolBinario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbolBinario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvArbolBinario.Location = new System.Drawing.Point(177, 19);
+            this.dgvArbolBinario.Name = "dgvArbolBinario";
+            this.dgvArbolBinario.Size = new System.Drawing.Size(404, 150);
+            this.dgvArbolBinario.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tramite";
+            this.Column3.Name = "Column3";
             // 
             // frmArbolBinario
             // 
@@ -246,24 +270,25 @@
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.mrcEliminarElemento);
             this.Controls.Add(this.mrcNuevoElemento);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvArbol);
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructur de datos - Arbol binario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();
             this.mrcEliminarElemento.ResumeLayout(false);
             this.mrcEliminarElemento.PerformLayout();
             this.mrcLstArbol.ResumeLayout(false);
             this.mrcLstArbol.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbolBinario)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvArbol;
         private System.Windows.Forms.GroupBox mrcNuevoElemento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTraN;
@@ -281,6 +306,9 @@
         private System.Windows.Forms.RadioButton optPostOrder;
         private System.Windows.Forms.RadioButton optPreOrder;
         private System.Windows.Forms.RadioButton optInOrder;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvArbolBinario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
