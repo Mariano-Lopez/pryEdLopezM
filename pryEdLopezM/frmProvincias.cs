@@ -30,7 +30,7 @@ namespace pryEdLopezM
         private void btnGrabar_Click(object sender, EventArgs e)
         {
 
-            if (txtNomProv.Text == "")
+            if (txtNomProv.Text == "" && txtCod.Text == "")
             {
                 MessageBox.Show("No se cargaron datos", "Error");
             }
@@ -46,6 +46,15 @@ namespace pryEdLopezM
             }
             
 
+        }
+
+        private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es número ni tecla de control, se cancela
+                e.Handled = true;
+            }
         }
     }
 }

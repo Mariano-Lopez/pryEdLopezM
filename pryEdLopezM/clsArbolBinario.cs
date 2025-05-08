@@ -10,7 +10,8 @@ namespace pryEdLopezM
     internal class clsArbolBinario
     {
         private clsNodo PrimerNodo;
-
+        private clsNodo[] Vector = new clsNodo[100];
+        private Int32 i = 0;
         public clsNodo Raiz
         {
 
@@ -58,17 +59,9 @@ namespace pryEdLopezM
             }
         }
 
-        private clsNodo[] Vector = new clsNodo[100];
-        private Int32 i = 0;
+        
 
-        public void Equilibrar()
-        {
-            i = 0;
-            GrabarVectorInOrden(Raiz);
-            Raiz = null;
-            EquilibrarArbol(0, i - 1);
-
-        }
+        
 
         public void Eliminar(Int32 codigo)
         {
@@ -77,6 +70,7 @@ namespace pryEdLopezM
             Raiz = null;
             EquilibrarArbol(0, i - 1);
         }
+
 
         public void EquilibrarArbol(Int32 ini, Int32 fin)
         {
@@ -90,6 +84,16 @@ namespace pryEdLopezM
                 EquilibrarArbol(m + 1, fin);
             }
         }
+
+        public void Equilibrar()
+        {
+            i = 0;
+            GrabarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+
+        }
+
 
         private void GrabarVectorInOrden(clsNodo NodoPadre)
         {
@@ -109,7 +113,7 @@ namespace pryEdLopezM
 
         }
 
-        private void GrabarVectorInOrden(clsNodo NodoPadre, Int32 codigo)
+        private void GrabarVectorInOrden(clsNodo NodoPadre, int codigo)
         {
 
             if (NodoPadre.Izquierdo != null)
@@ -117,8 +121,12 @@ namespace pryEdLopezM
                 GrabarVectorInOrden(NodoPadre.Izquierdo, codigo);
 
             }
-            Vector[i] = NodoPadre;
-            i = i + 1;
+            if(NodoPadre.Codigo != codigo)
+            {
+                Vector[i] = NodoPadre;
+                i = i + 1;
+            }
+            
             if (NodoPadre.Derecho != null)
             {
                 GrabarVectorInOrden(NodoPadre.Derecho, codigo);
@@ -171,6 +179,32 @@ namespace pryEdLopezM
 
         }
 
+        public void RecorrerPre(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            PreOrden(dgv, Raiz);
+
+        }
+
+        public void RecorrerPost(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            PostOrden(dgv, Raiz);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         public void InOrdenAsc(DataGridView dgv, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(dgv, R.Izquierdo);
@@ -194,29 +228,19 @@ namespace pryEdLopezM
                 InOrdenDesc(Lst, R.Izquierdo);
             }
         }
-        public void PreOrden(ListBox Lst, clsNodo R)
+
+        public void PostOrden(DataGridView dgv, clsNodo R)
         {
-            Lst.Items.Add(R.Codigo);
+            
             if (R.Izquierdo != null)
             {
-                PreOrden(Lst, R.Izquierdo);
+                PreOrden(dgv, R.Izquierdo);
             }
             if (R.Derecho != null)
             {
-                PreOrden(Lst, R.Derecho);
+                PreOrden(dgv, R.Derecho);
             }
-        }
-        public void PostOrden(ListBox Lst, clsNodo R)
-        {
-            if (R.Izquierdo != null)
-            {
-                PostOrden(Lst, R.Izquierdo);
-            }
-            if (R.Derecho != null)
-            {
-                PostOrden(Lst, R.Derecho);
-            }
-            Lst.Items.Add(R.Codigo);
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
         public void Recorrer(TreeView tree)
@@ -226,6 +250,19 @@ namespace pryEdLopezM
             tree.Nodes.Add(NodoPadre);
             PreOrden(Raiz, NodoPadre);
             tree.ExpandAll();
+        }
+
+        public void PreOrden(DataGridView dgv, clsNodo R)
+        {
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null)
+            {
+                PreOrden(dgv, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrden(dgv, R.Derecho);
+            }
         }
 
 

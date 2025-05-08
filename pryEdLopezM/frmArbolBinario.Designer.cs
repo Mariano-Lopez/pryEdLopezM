@@ -167,6 +167,7 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label3
             // 
@@ -210,6 +211,7 @@
             this.optPostOrder.TabStop = true;
             this.optPostOrder.Text = "Post-Order";
             this.optPostOrder.UseVisualStyleBackColor = true;
+            this.optPostOrder.CheckedChanged += new System.EventHandler(this.optPostOrder_CheckedChanged);
             // 
             // optPreOrder
             // 
@@ -221,6 +223,7 @@
             this.optPreOrder.TabStop = true;
             this.optPreOrder.Text = "Pre-Order";
             this.optPreOrder.UseVisualStyleBackColor = true;
+            this.optPreOrder.CheckedChanged += new System.EventHandler(this.optPreOrder_CheckedChanged);
             // 
             // optInOrder
             // 
@@ -232,6 +235,7 @@
             this.optInOrder.TabStop = true;
             this.optInOrder.Text = "In-Order";
             this.optInOrder.UseVisualStyleBackColor = true;
+            this.optInOrder.CheckedChanged += new System.EventHandler(this.optInOrder_CheckedChanged);
             // 
             // dgvArbolBinario
             // 
@@ -273,7 +277,7 @@
             this.Controls.Add(this.tvArbol);
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Estructur de datos - Arbol binario";
+            this.Text = "Estructura de datos - Arbol binario";
             this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();

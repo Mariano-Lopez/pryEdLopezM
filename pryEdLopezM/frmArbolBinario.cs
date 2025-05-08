@@ -51,6 +51,40 @@ namespace pryEdLopezM
 
         }
 
-        
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            ab.Eliminar(Convert.ToInt32(cmbEListaDoble.Text));
+
+            cmbEListaDoble.SelectedIndex = -1;
+
+            if (ab.Raiz !=null)
+            {
+                ab.Recorrer(tvArbol);
+                ab.Recorrer(cmbEListaDoble);
+                ab.Recorrer(dgvArbolBinario);
+            }
+            else
+            {
+                tvArbol.Nodes.Clear(); cmbEListaDoble.Items.Clear(); dgvArbolBinario.Rows.Clear();
+            }
+            
+            
+        }
+
+        private void optInOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            ab.Recorrer(dgvArbolBinario);
+        }
+
+        private void optPreOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            ab.RecorrerPre(dgvArbolBinario);
+        }
+
+        private void optPostOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            ab.RecorrerPost(dgvArbolBinario);
+        }
     }
 }

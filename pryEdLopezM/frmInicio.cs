@@ -15,6 +15,7 @@ namespace pryEdLopezM
         public frmInicio()
         {
             InitializeComponent();
+            
         }
 
         private void datosDelProgramadorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,10 +71,12 @@ namespace pryEdLopezM
             v.ShowDialog();
         }
 
-        private void árbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void árbolBinarioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmArbolBinario v = new frmArbolBinario();
             v.ShowDialog();
         }
+
+        
     }
 }

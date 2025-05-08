@@ -65,6 +65,7 @@
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(194, 20);
             this.txtCod.TabIndex = 8;
+            this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
             // 
             // lblCod
             // 
@@ -77,12 +78,20 @@
             // 
             // dgvGrilla
             // 
+            this.dgvGrilla.AllowUserToAddRows = false;
+            this.dgvGrilla.AllowUserToDeleteRows = false;
+            this.dgvGrilla.AllowUserToResizeColumns = false;
+            this.dgvGrilla.AllowUserToResizeRows = false;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
             this.dgvGrilla.Location = new System.Drawing.Point(12, 108);
+            this.dgvGrilla.MultiSelect = false;
             this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.ReadOnly = true;
+            this.dgvGrilla.RowHeadersVisible = false;
+            this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(262, 150);
             this.dgvGrilla.TabIndex = 10;
             // 
@@ -90,11 +99,13 @@
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // txtNomProv
             // 
