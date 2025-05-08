@@ -74,9 +74,8 @@
             // 
             // cmbPila
             // 
-            this.cmbPila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPila.FormattingEnabled = true;
-            this.cmbPila.Location = new System.Drawing.Point(16, 184);
+            this.cmbPila.Location = new System.Drawing.Point(12, 184);
             this.cmbPila.Name = "cmbPila";
             this.cmbPila.Size = new System.Drawing.Size(185, 21);
             this.cmbPila.TabIndex = 9;
@@ -91,10 +90,6 @@
             // 
             // dgvDatos
             // 
-            this.dgvDatos.AllowUserToAddRows = false;
-            this.dgvDatos.AllowUserToDeleteRows = false;
-            this.dgvDatos.AllowUserToResizeColumns = false;
-            this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -102,9 +97,6 @@
             this.Column3});
             this.dgvDatos.Location = new System.Drawing.Point(207, 31);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.RowHeadersVisible = false;
-            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(329, 174);
             this.dgvDatos.TabIndex = 7;
             // 
@@ -112,19 +104,16 @@
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Trámite";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // mrcEliminarElemento
             // 

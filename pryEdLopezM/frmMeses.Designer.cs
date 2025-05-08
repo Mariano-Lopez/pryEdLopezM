@@ -43,19 +43,12 @@
             // 
             // dgvMes
             // 
-            this.dgvMes.AllowUserToAddRows = false;
-            this.dgvMes.AllowUserToDeleteRows = false;
-            this.dgvMes.AllowUserToResizeColumns = false;
-            this.dgvMes.AllowUserToResizeRows = false;
             this.dgvMes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
             this.dgvMes.Location = new System.Drawing.Point(12, 143);
-            this.dgvMes.MultiSelect = false;
             this.dgvMes.Name = "dgvMes";
-            this.dgvMes.ReadOnly = true;
-            this.dgvMes.RowHeadersVisible = false;
             this.dgvMes.Size = new System.Drawing.Size(244, 150);
             this.dgvMes.TabIndex = 0;
             // 
@@ -63,13 +56,11 @@
             // 
             this.Column1.HeaderText = "Número";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Mes";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // txtMes
             // 

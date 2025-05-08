@@ -21,15 +21,13 @@ namespace pryEdLopezM
         clsListaDoble lstDoble = new clsListaDoble();
         private void frmListaDoble_Load(object sender, EventArgs e)
         {
-            optAsc.Checked = true;
-
 
             if (File.Exists("ListaDoble.csv"))
             {
 
                 lstDoble.Agregar(); //Leo los datos del archivo
 
-
+                optAsc.Checked = true;
                 optAscSelecc();
                 
                 ValidarDatos();
@@ -40,7 +38,6 @@ namespace pryEdLopezM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
             clsNodo Nodo = new clsNodo();
 
             Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
@@ -55,7 +52,6 @@ namespace pryEdLopezM
             txtCodN.Text = "";
             txtNomN.Text = "";
             txtTraN.Text = "";
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -144,7 +140,5 @@ namespace pryEdLopezM
                 lstDoble.Recorrer1(cmbEListaDoble);
             }
         }
-
-        
     }
 }

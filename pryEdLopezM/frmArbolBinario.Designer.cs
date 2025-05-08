@@ -246,6 +246,7 @@
             this.Column3});
             this.dgvArbolBinario.Location = new System.Drawing.Point(177, 19);
             this.dgvArbolBinario.Name = "dgvArbolBinario";
+            this.dgvArbolBinario.RowHeadersVisible = false;
             this.dgvArbolBinario.Size = new System.Drawing.Size(404, 150);
             this.dgvArbolBinario.TabIndex = 0;
             // 

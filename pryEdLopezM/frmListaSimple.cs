@@ -40,32 +40,29 @@ namespace pryEdLopezM
             if (txtCodN.Text != "" && txtNomN.Text != "" && txtTraN.Text != "")
             {
 
-                clsNodo Nodo = new clsNodo();
+            clsNodo Nodo = new clsNodo();
 
-                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-                Nodo.Nombre = txtNomN.Text;
-                Nodo.Tramite = txtTraN.Text;
+            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+            Nodo.Nombre = txtNomN.Text;
+            Nodo.Tramite = txtTraN.Text;
 
-                ls.agregar(Nodo);
+            ls.agregar(Nodo);
 
-                ls.Recorrer(); //Archivo de texto
-                ls.Recorrer(dgvDatos); //Muestro en grilla
-                ls.Recorrer(lstDatos); //Muestro en lista
-                ls.Recorrer(cmbEListaSimple);
+            ls.Recorrer(); //Archivo de texto
+            ls.Recorrer(dgvDatos); //Muestro en grilla
+            ls.Recorrer(lstDatos); //Muestro en lista
+            ls.Recorrer(cmbEListaSimple);
 
-                txtCodN.Text = "";
-                txtNomN.Text = "";
-                txtTraN.Text = "";
+            txtCodN.Text = "";
+            txtNomN.Text = "";
+            txtTraN.Text = "";
 
             }
             else
             {
                 MessageBox.Show("No se pueden dejar campos vacíos.", "Error de carga");
             }
-
-
-            
-
+           
             
 
         }
