@@ -39,21 +39,25 @@ namespace pryEdLopezM
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtCodN.Text) && !string.IsNullOrWhiteSpace(txtNomN.Text) && !string.IsNullOrWhiteSpace(txtTraN.Text)) 
-            { 
-            
+            {
+                clsNodo Nodo = new clsNodo();
+
+                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+                Nodo.Nombre = txtNomN.Text;
+                Nodo.Tramite = txtTraN.Text;
+
+                lstDoble.agregar(Nodo);
+
+                optAscSelecc();
+                optDescSelecc();
+
+                reseteoComp();
             }
-            clsNodo Nodo = new clsNodo();
-
-            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-            Nodo.Nombre = txtNomN.Text;
-            Nodo.Tramite = txtTraN.Text;
-
-            lstDoble.agregar(Nodo);
-
-            optAscSelecc();
-            optDescSelecc();
-
-            reseteoComp();
+            else
+            {
+                MessageBox.Show("No se pueden dejar campos vacíos","Error");
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

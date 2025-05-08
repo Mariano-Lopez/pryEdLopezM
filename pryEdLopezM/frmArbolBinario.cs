@@ -26,21 +26,28 @@ namespace pryEdLopezM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo aux = new clsNodo();
+            if (!string.IsNullOrWhiteSpace(txtCodN.Text) && !string.IsNullOrWhiteSpace(txtNomN.Text) && !string.IsNullOrWhiteSpace(txtTraN.Text))
+            {
+                clsNodo aux = new clsNodo();
 
-            aux.Codigo = Convert.ToInt32(txtCodN.Text); 
-            aux.Nombre = txtNomN.Text;
-            aux.Tramite = txtTraN.Text;
+                aux.Codigo = Convert.ToInt32(txtCodN.Text);
+                aux.Nombre = txtNomN.Text;
+                aux.Tramite = txtTraN.Text;
 
-            ab.Agregar(aux);
+                ab.Agregar(aux);
 
-            txtCodN.Text = "";
-            txtNomN.Text = "";
-            txtTraN.Text = "";
+                ab.Recorrer(cmbEListaDoble);
+                ab.Recorrer(dgvArbolBinario);
+                ab.Recorrer(tvArbol);
 
-            ab.Recorrer(cmbEListaDoble);
-            ab.Recorrer(dgvArbolBinario);
-            ab.Recorrer(tvArbol);
+                reseteoComp();
+            }
+            else
+            {
+                MessageBox.Show("No se pueden dejar campos vacíos","Error");
+            }
+
+            
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
@@ -73,6 +80,8 @@ namespace pryEdLopezM
                 {
                     tvArbol.Nodes.Clear(); cmbEListaDoble.Items.Clear(); dgvArbolBinario.Rows.Clear();
                 }
+
+                reseteoComp();
             }
             else
             {
@@ -96,6 +105,13 @@ namespace pryEdLopezM
         private void optPostOrder_CheckedChanged(object sender, EventArgs e)
         {
             ab.RecorrerPost(dgvArbolBinario);
+        }
+
+        public void reseteoComp()
+        {
+            txtCodN.Text = "";
+            txtNomN.Text = "";
+            txtTraN.Text = "";
         }
     }
 }

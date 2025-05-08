@@ -38,23 +38,25 @@ namespace pryEdLopezM
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             
+                clsNodo Nodo = new clsNodo();
 
-            clsNodo Nodo = new clsNodo();
+                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+                Nodo.Nombre = txtNomN.Text;
+                Nodo.Tramite = txtTraN.Text;
 
-            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-            Nodo.Nombre = txtNomN.Text;
-            Nodo.Tramite = txtTraN.Text;
+                ls.agregar(Nodo);
 
-            ls.agregar(Nodo);
+                ls.Recorrer(); //Archivo de texto
+                ls.Recorrer(dgvDatos); //Muestro en grilla
+                ls.Recorrer(lstDatos); //Muestro en lista
+                ls.Recorrer(cmbEListaSimple);
 
-            ls.Recorrer(); //Archivo de texto
-            ls.Recorrer(dgvDatos); //Muestro en grilla
-            ls.Recorrer(lstDatos); //Muestro en lista
-            ls.Recorrer(cmbEListaSimple);
+                reseteoComp();
+            
+            
+            
 
-            txtCodN.Text = "";
-            txtNomN.Text = "";
-            txtTraN.Text = "";
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace pryEdLopezM
                 ls.Recorrer(lstDatos); //Muestro en lista
                 ls.Recorrer(cmbEListaSimple);
                 cmbEListaSimple.Text = null;
+                reseteoComp();
             }
             else
             {
@@ -78,7 +81,7 @@ namespace pryEdLopezM
 
         public void ValidarDatos()
         {
-            if (!string.IsNullOrWhiteSpace(txtCodN.Text) ||!string.IsNullOrWhiteSpace(txtNomN.Text) || !string.IsNullOrWhiteSpace(txtTraN.Text) )
+            if (string.IsNullOrWhiteSpace(txtCodN.Text) || string.IsNullOrWhiteSpace(txtNomN.Text) || string.IsNullOrWhiteSpace(txtTraN.Text) )
             {
                 btnAgregar.Enabled = false;
             }
@@ -110,6 +113,13 @@ namespace pryEdLopezM
         private void txtTraN_TextChanged(object sender, EventArgs e)
         {
             ValidarDatos();
+        }
+
+        public void reseteoComp()
+        {
+            txtCodN.Text = "";
+            txtNomN.Text = "";
+            txtTraN.Text = "";
         }
     }
 }

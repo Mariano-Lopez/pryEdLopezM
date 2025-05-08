@@ -74,6 +74,7 @@
             // 
             // cmbCola
             // 
+            this.cmbCola.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCola.FormattingEnabled = true;
             this.cmbCola.Location = new System.Drawing.Point(12, 184);
             this.cmbCola.Name = "cmbCola";
@@ -90,13 +91,21 @@
             // 
             // dgvCola
             // 
+            this.dgvCola.AllowUserToAddRows = false;
+            this.dgvCola.AllowUserToDeleteRows = false;
+            this.dgvCola.AllowUserToResizeColumns = false;
+            this.dgvCola.AllowUserToResizeRows = false;
             this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
             this.dgvCola.Location = new System.Drawing.Point(207, 31);
+            this.dgvCola.MultiSelect = false;
             this.dgvCola.Name = "dgvCola";
+            this.dgvCola.ReadOnly = true;
+            this.dgvCola.RowHeadersVisible = false;
+            this.dgvCola.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCola.Size = new System.Drawing.Size(329, 174);
             this.dgvCola.TabIndex = 7;
             // 
@@ -104,16 +113,19 @@
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Trámite";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // mrcEliminarElemento
             // 
