@@ -50,6 +50,7 @@
             this.txtNomCiu.Name = "txtNomCiu";
             this.txtNomCiu.Size = new System.Drawing.Size(100, 20);
             this.txtNomCiu.TabIndex = 1;
+            
             // 
             // btnGrabar
             // 

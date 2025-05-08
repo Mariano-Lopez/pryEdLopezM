@@ -37,22 +37,34 @@ namespace pryEdLopezM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo Nodo = new clsNodo();
+            if (txtCodN.Text != "" && txtNomN.Text != "" && txtTraN.Text != "")
+            {
 
-            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-            Nodo.Nombre = txtNomN.Text;
-            Nodo.Tramite = txtTraN.Text;
+                clsNodo Nodo = new clsNodo();
 
-            ls.agregar(Nodo);
+                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+                Nodo.Nombre = txtNomN.Text;
+                Nodo.Tramite = txtTraN.Text;
 
-            ls.Recorrer(); //Archivo de texto
-            ls.Recorrer(dgvDatos); //Muestro en grilla
-            ls.Recorrer(lstDatos); //Muestro en lista
-            ls.Recorrer(cmbEListaSimple);
+                ls.agregar(Nodo);
 
-            txtCodN.Text = "";
-            txtNomN.Text = "";
-            txtTraN.Text = "";
+                ls.Recorrer(); //Archivo de texto
+                ls.Recorrer(dgvDatos); //Muestro en grilla
+                ls.Recorrer(lstDatos); //Muestro en lista
+                ls.Recorrer(cmbEListaSimple);
+
+                txtCodN.Text = "";
+                txtNomN.Text = "";
+                txtTraN.Text = "";
+
+            }
+            else
+            {
+                MessageBox.Show("No se pueden dejar campos vacíos.", "Error de carga");
+            }
+
+
+            
 
             
 

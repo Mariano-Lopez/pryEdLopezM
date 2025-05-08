@@ -27,7 +27,7 @@ namespace pryEdLopezM
         private void btnGrabar_Click(object sender, EventArgs e)
         {
 
-            if (txtNomCiu.Text == "")
+            if (!string.IsNullOrWhiteSpace(txtNomCiu.Text))
             {
                 MessageBox.Show("No se encontraron datos", "Error");
             }
@@ -40,5 +40,7 @@ namespace pryEdLopezM
             }
            
         }
+
+        
     }
 }

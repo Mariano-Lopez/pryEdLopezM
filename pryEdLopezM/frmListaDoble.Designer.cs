@@ -70,6 +70,7 @@
             this.mrcLstDgv.TabIndex = 20;
             this.mrcLstDgv.TabStop = false;
             this.mrcLstDgv.Text = "Listado en una Lista y una Grilla";
+            
             // 
             // lstDatos
             // 
@@ -81,13 +82,21 @@
             // 
             // dgvDatos
             // 
+            this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToDeleteRows = false;
+            this.dgvDatos.AllowUserToResizeColumns = false;
+            this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
             this.dgvDatos.Location = new System.Drawing.Point(207, 31);
+            this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersVisible = false;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(329, 241);
             this.dgvDatos.TabIndex = 7;
             // 
@@ -121,6 +130,7 @@
             // 
             // cmbEListaDoble
             // 
+            this.cmbEListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEListaDoble.FormattingEnabled = true;
             this.cmbEListaDoble.Location = new System.Drawing.Point(53, 25);
             this.cmbEListaDoble.Name = "cmbEListaDoble";
@@ -278,7 +288,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(567, 504);
             this.Controls.Add(this.mrcListar);

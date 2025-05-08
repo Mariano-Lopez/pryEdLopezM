@@ -29,23 +29,34 @@ namespace pryEdLopezM
                 f.Recorrer(); //Archivo de texto
                 f.Recorrer(dgvDatos); //Muestro en grilla
                 f.Recorrer(lstDatos); //Muestro en lista
+                f.Recorrer(cmbPila);
 
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo Nodo = new clsNodo();
+            if (txtCodN.Text != "" && txtNomN.Text != "" && txtTraN.Text != "")
+            {
+                clsNodo Nodo = new clsNodo();
 
-            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-            Nodo.Nombre = txtNomN.Text;
-            Nodo.Tramite = txtTraN.Text;
+                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+                Nodo.Nombre = txtNomN.Text;
+                Nodo.Tramite = txtTraN.Text;
 
-            f.Agregar(Nodo);
+                f.Agregar(Nodo);
 
-            f.Recorrer(); //Archivo de texto
-            f.Recorrer(dgvDatos); //Muestro en grilla
-            f.Recorrer(lstDatos); //Muestro en lista
+                f.Recorrer(); //Archivo de texto
+                f.Recorrer(dgvDatos); //Muestro en grilla
+                f.Recorrer(lstDatos); //Muestro en lista
+                f.Recorrer(cmbPila);
+            }
+            else
+            {
+                MessageBox.Show("No se pueden dejar campos vacíos.","Error de carga");
+            }
+
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -61,6 +72,7 @@ namespace pryEdLopezM
                 f.Recorrer(); //Archivo de texto
                 f.Recorrer(dgvDatos); //Muestro en grilla
                 f.Recorrer(lstDatos); //Muestro en lista
+                f.Recorrer(cmbPila);
 
             }
             else
@@ -70,5 +82,7 @@ namespace pryEdLopezM
                 lblTraE.Text = "";
             }
         }
+
+        
     }
 }
