@@ -56,6 +56,7 @@
             this.dgvMes.Name = "dgvMes";
             this.dgvMes.ReadOnly = true;
             this.dgvMes.RowHeadersVisible = false;
+            this.dgvMes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMes.Size = new System.Drawing.Size(244, 150);
             this.dgvMes.TabIndex = 0;
             // 

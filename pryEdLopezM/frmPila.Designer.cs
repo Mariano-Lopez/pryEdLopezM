@@ -76,7 +76,7 @@
             // 
             this.cmbPila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPila.FormattingEnabled = true;
-            this.cmbPila.Location = new System.Drawing.Point(16, 184);
+            this.cmbPila.Location = new System.Drawing.Point(12, 184);
             this.cmbPila.Name = "cmbPila";
             this.cmbPila.Size = new System.Drawing.Size(185, 21);
             this.cmbPila.TabIndex = 9;
@@ -101,6 +101,7 @@
             this.Column2,
             this.Column3});
             this.dgvDatos.Location = new System.Drawing.Point(207, 31);
+            this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersVisible = false;

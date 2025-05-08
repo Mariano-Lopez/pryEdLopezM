@@ -37,37 +37,24 @@ namespace pryEdLopezM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtCodN.Text != "" && txtNomN.Text != "" && txtTraN.Text != "")
-            {
-
-                clsNodo Nodo = new clsNodo();
-
-                Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
-                Nodo.Nombre = txtNomN.Text;
-                Nodo.Tramite = txtTraN.Text;
-
-                ls.agregar(Nodo);
-
-                ls.Recorrer(); //Archivo de texto
-                ls.Recorrer(dgvDatos); //Muestro en grilla
-                ls.Recorrer(lstDatos); //Muestro en lista
-                ls.Recorrer(cmbEListaSimple);
-
-                txtCodN.Text = "";
-                txtNomN.Text = "";
-                txtTraN.Text = "";
-
-            }
-            else
-            {
-                MessageBox.Show("No se pueden dejar campos vacíos.", "Error de carga");
-            }
-
-
             
 
-            
+            clsNodo Nodo = new clsNodo();
 
+            Nodo.Codigo = Convert.ToInt32(txtCodN.Text);
+            Nodo.Nombre = txtNomN.Text;
+            Nodo.Tramite = txtTraN.Text;
+
+            ls.agregar(Nodo);
+
+            ls.Recorrer(); //Archivo de texto
+            ls.Recorrer(dgvDatos); //Muestro en grilla
+            ls.Recorrer(lstDatos); //Muestro en lista
+            ls.Recorrer(cmbEListaSimple);
+
+            txtCodN.Text = "";
+            txtNomN.Text = "";
+            txtTraN.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -91,7 +78,7 @@ namespace pryEdLopezM
 
         public void ValidarDatos()
         {
-            if (txtCodN.Text == "" || txtNomN.Text == "" || txtTraN.Text == "")
+            if (!string.IsNullOrWhiteSpace(txtCodN.Text) ||!string.IsNullOrWhiteSpace(txtNomN.Text) || !string.IsNullOrWhiteSpace(txtTraN.Text) )
             {
                 btnAgregar.Enabled = false;
             }

@@ -30,7 +30,7 @@ namespace pryEdLopezM
         private void btnGrabar_Click(object sender, EventArgs e)
         {
 
-            if (txtNomProv.Text == "" && txtCod.Text == "")
+            if (!string.IsNullOrWhiteSpace(txtCod.Text) && !string.IsNullOrWhiteSpace(txtNomProv.Text))
             {
                 MessageBox.Show("No se cargaron datos", "Error");
             }

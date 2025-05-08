@@ -36,7 +36,7 @@ namespace pryEdLopezM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtCodN.Text != "" && txtNomN.Text != "" && txtTraN.Text != "")
+            if (!string.IsNullOrWhiteSpace(txtCodN.Text) && !string.IsNullOrWhiteSpace(txtNomN.Text) && !string.IsNullOrWhiteSpace(txtTraN.Text)) 
             {
                 clsNodo Nodo = new clsNodo();
 
@@ -50,13 +50,15 @@ namespace pryEdLopezM
                 f.Recorrer(dgvDatos); //Muestro en grilla
                 f.Recorrer(lstDatos); //Muestro en lista
                 f.Recorrer(cmbPila);
+
+                resetCompo();
+
+
             }
             else
             {
-                MessageBox.Show("No se pueden dejar campos vacíos.","Error de carga");
+                MessageBox.Show("No se pueden dejar campos vacíos.", "Error de carga");
             }
-
-            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -73,16 +75,20 @@ namespace pryEdLopezM
                 f.Recorrer(dgvDatos); //Muestro en grilla
                 f.Recorrer(lstDatos); //Muestro en lista
                 f.Recorrer(cmbPila);
+                resetCompo();
 
             }
             else
             {
-                lblCodE.Text = "";
-                lblNomE.Text = "";
-                lblTraE.Text = "";
+                resetCompo();
             }
         }
 
-        
+        public void resetCompo()
+        {
+            lblCodE.Text = "";
+            lblNomE.Text = "";
+            lblTraE.Text = "";
+        }
     }
 }

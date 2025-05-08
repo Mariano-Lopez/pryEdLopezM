@@ -153,6 +153,7 @@
             // 
             // cmbEListaDoble
             // 
+            this.cmbEListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEListaDoble.FormattingEnabled = true;
             this.cmbEListaDoble.Location = new System.Drawing.Point(53, 25);
             this.cmbEListaDoble.Name = "cmbEListaDoble";
@@ -208,7 +209,6 @@
             this.optPostOrder.Name = "optPostOrder";
             this.optPostOrder.Size = new System.Drawing.Size(75, 17);
             this.optPostOrder.TabIndex = 3;
-            this.optPostOrder.TabStop = true;
             this.optPostOrder.Text = "Post-Order";
             this.optPostOrder.UseVisualStyleBackColor = true;
             this.optPostOrder.CheckedChanged += new System.EventHandler(this.optPostOrder_CheckedChanged);
@@ -220,7 +220,6 @@
             this.optPreOrder.Name = "optPreOrder";
             this.optPreOrder.Size = new System.Drawing.Size(70, 17);
             this.optPreOrder.TabIndex = 2;
-            this.optPreOrder.TabStop = true;
             this.optPreOrder.Text = "Pre-Order";
             this.optPreOrder.UseVisualStyleBackColor = true;
             this.optPreOrder.CheckedChanged += new System.EventHandler(this.optPreOrder_CheckedChanged);
@@ -228,6 +227,7 @@
             // optInOrder
             // 
             this.optInOrder.AutoSize = true;
+            this.optInOrder.Checked = true;
             this.optInOrder.Location = new System.Drawing.Point(17, 29);
             this.optInOrder.Name = "optInOrder";
             this.optInOrder.Size = new System.Drawing.Size(63, 17);
@@ -239,13 +239,21 @@
             // 
             // dgvArbolBinario
             // 
+            this.dgvArbolBinario.AllowUserToAddRows = false;
+            this.dgvArbolBinario.AllowUserToDeleteRows = false;
+            this.dgvArbolBinario.AllowUserToResizeColumns = false;
+            this.dgvArbolBinario.AllowUserToResizeRows = false;
             this.dgvArbolBinario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArbolBinario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
             this.dgvArbolBinario.Location = new System.Drawing.Point(177, 19);
+            this.dgvArbolBinario.MultiSelect = false;
             this.dgvArbolBinario.Name = "dgvArbolBinario";
+            this.dgvArbolBinario.ReadOnly = true;
+            this.dgvArbolBinario.RowHeadersVisible = false;
+            this.dgvArbolBinario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArbolBinario.Size = new System.Drawing.Size(404, 150);
             this.dgvArbolBinario.TabIndex = 0;
             // 

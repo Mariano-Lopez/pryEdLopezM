@@ -45,7 +45,7 @@
             this.lblCarrera = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
             this.lblTNom = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fotoDesarrollador)).BeginInit();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,6 @@
             // 
             // fotoDesarrollador
             // 
-            this.fotoDesarrollador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fotoDesarrollador.Cursor = System.Windows.Forms.Cursors.Default;
             this.fotoDesarrollador.Image = ((System.Drawing.Image)(resources.GetObject("fotoDesarrollador.Image")));
             this.fotoDesarrollador.Location = new System.Drawing.Point(314, 23);
@@ -226,22 +225,22 @@
             this.lblTNom.TabIndex = 2;
             this.lblTNom.Text = "Nombre y apellido";
             // 
-            // panel1
+            // pnlLogo
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(299, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 303);
-            this.panel1.TabIndex = 4;
+            this.pnlLogo.BackColor = System.Drawing.Color.Black;
+            this.pnlLogo.Location = new System.Drawing.Point(299, 12);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(312, 301);
+            this.pnlLogo.TabIndex = 4;
             // 
             // frmDatosDelProgramador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(628, 432);
+            this.ClientSize = new System.Drawing.Size(622, 432);
             this.Controls.Add(this.fotoDesarrollador);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.mrcDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDatosDelProgramador";
@@ -272,6 +271,6 @@
         private System.Windows.Forms.Label lblTNom;
         private System.Windows.Forms.Label lblTMateria;
         private System.Windows.Forms.Label lblTSemestre;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlLogo;
     }
 }

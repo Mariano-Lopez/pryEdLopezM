@@ -45,29 +45,40 @@ namespace pryEdLopezM
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            ab.Equilibrar();
-            ab.Recorrer(dgvArbolBinario);
-            ab.Recorrer(tvArbol);
-
+            if (ab.Raiz != null)
+            {
+                ab.Equilibrar();
+                ab.Recorrer(dgvArbolBinario);
+                ab.Recorrer(tvArbol);
+            }
+            
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-            ab.Eliminar(Convert.ToInt32(cmbEListaDoble.Text));
-
-            cmbEListaDoble.SelectedIndex = -1;
-
-            if (ab.Raiz !=null)
+            if(cmbEListaDoble.SelectedIndex != -1)
             {
-                ab.Recorrer(tvArbol);
-                ab.Recorrer(cmbEListaDoble);
-                ab.Recorrer(dgvArbolBinario);
+                ab.Eliminar(Convert.ToInt32(cmbEListaDoble.SelectedItem.ToString()));
+
+                cmbEListaDoble.SelectedIndex = -1;
+
+                if (ab.Raiz != null)
+                {
+                    ab.Recorrer(tvArbol);
+                    ab.Recorrer(cmbEListaDoble);
+                    ab.Recorrer(dgvArbolBinario);
+                }
+                else
+                {
+                    tvArbol.Nodes.Clear(); cmbEListaDoble.Items.Clear(); dgvArbolBinario.Rows.Clear();
+                }
             }
             else
             {
-                tvArbol.Nodes.Clear(); cmbEListaDoble.Items.Clear(); dgvArbolBinario.Rows.Clear();
+                MessageBox.Show("Seleccione una opción","Error");
             }
+            
             
             
         }

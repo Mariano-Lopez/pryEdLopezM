@@ -70,7 +70,6 @@
             this.mrcLstDgv.TabIndex = 20;
             this.mrcLstDgv.TabStop = false;
             this.mrcLstDgv.Text = "Listado en una Lista y una Grilla";
-            
             // 
             // lstDatos
             // 
@@ -266,7 +265,6 @@
             this.optDesc.Name = "optDesc";
             this.optDesc.Size = new System.Drawing.Size(89, 17);
             this.optDesc.TabIndex = 1;
-            this.optDesc.TabStop = true;
             this.optDesc.Text = "Descendente";
             this.optDesc.UseVisualStyleBackColor = true;
             this.optDesc.CheckedChanged += new System.EventHandler(this.optDesc_CheckedChanged);
@@ -274,6 +272,7 @@
             // optAsc
             // 
             this.optAsc.AutoSize = true;
+            this.optAsc.Checked = true;
             this.optAsc.Location = new System.Drawing.Point(15, 19);
             this.optAsc.Name = "optAsc";
             this.optAsc.Size = new System.Drawing.Size(82, 17);

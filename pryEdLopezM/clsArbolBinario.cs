@@ -87,11 +87,20 @@ namespace pryEdLopezM
 
         public void Equilibrar()
         {
-            i = 0;
-            GrabarVectorInOrden(Raiz);
-            Raiz = null;
-            EquilibrarArbol(0, i - 1);
-
+            if (Raiz != null)
+            {
+                i = 0;
+                GrabarVectorInOrden(Raiz);
+                Raiz = null;
+                EquilibrarArbol(0, i - 1);
+            }
+            else
+            {
+                
+               MessageBox.Show("No se puede equilibrar un árbol vacío.", "Error");
+                
+            }
+           
         }
 
 
@@ -207,13 +216,13 @@ namespace pryEdLopezM
 
         public void InOrdenAsc(DataGridView dgv, clsNodo R)
         {
+            
             if (R.Izquierdo != null) InOrdenAsc(dgv, R.Izquierdo);
 
             dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
 
             if (R.Derecho != null) InOrdenAsc(dgv, R.Derecho);
-
-
+            
         }
 
         public void InOrdenDesc(ListBox Lst, clsNodo R)
@@ -268,10 +277,13 @@ namespace pryEdLopezM
 
         private void PreOrden(clsNodo R, TreeNode NodoTreeView)
         {
+            
             TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
             NodoTreeView.Nodes.Add(NodoPadre);
             if (R.Izquierdo != null) PreOrden(R.Izquierdo, NodoPadre);
             if (R.Derecho != null) PreOrden(R.Derecho, NodoPadre);
+            
+            
         }
 
         public clsNodo BuscarCodigo(Int32 cod)

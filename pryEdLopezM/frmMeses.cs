@@ -30,7 +30,7 @@ namespace pryEdLopezM
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (txtMes.Text == " " || numMes.Value > 12 || numMes.Value < 1)
+            if (!string.IsNullOrWhiteSpace(txtMes.Text) || numMes.Value > 12 || numMes.Value < 1)
             {
 
                 MessageBox.Show("Datos erroneos", "Error de carga");
