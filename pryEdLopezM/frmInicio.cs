@@ -77,6 +77,10 @@ namespace pryEdLopezM
             v.ShowDialog();
         }
 
-        
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo v = new frmGrafo();
+            v.ShowDialog();
+        }
     }
 }

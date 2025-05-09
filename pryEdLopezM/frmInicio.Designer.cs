@@ -52,6 +52,7 @@
             this.estructuraNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.árbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspEdDMLopez.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +129,7 @@
             this.ciudadesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ciudadesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ciudadesToolStripMenuItem.Name = "ciudadesToolStripMenuItem";
-            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.ciudadesToolStripMenuItem.Text = "Ciudades...";
             this.ciudadesToolStripMenuItem.Click += new System.EventHandler(this.ciudadesToolStripMenuItem_Click);
             // 
@@ -137,7 +138,7 @@
             this.provinciasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.provinciasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
-            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.provinciasToolStripMenuItem.Text = "Provincias...";
             this.provinciasToolStripMenuItem.Click += new System.EventHandler(this.provinciasToolStripMenuItem_Click);
             // 
@@ -146,14 +147,14 @@
             this.toolStripMenuItem2.BackColor = System.Drawing.Color.Black;
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(134, 6);
             // 
             // mesesToolStripMenuItem
             // 
             this.mesesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.mesesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.mesesToolStripMenuItem.Name = "mesesToolStripMenuItem";
-            this.mesesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mesesToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.mesesToolStripMenuItem.Text = "Meses...";
             this.mesesToolStripMenuItem.Click += new System.EventHandler(this.mesesToolStripMenuItem_Click);
             // 
@@ -162,7 +163,7 @@
             this.diasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.diasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.diasToolStripMenuItem.Name = "diasToolStripMenuItem";
-            this.diasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.diasToolStripMenuItem.Text = "Dias...";
             // 
             // toolStripMenuItem3
@@ -170,14 +171,14 @@
             this.toolStripMenuItem3.BackColor = System.Drawing.Color.Black;
             this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(134, 6);
             // 
             // materiasToolStripMenuItem
             // 
             this.materiasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.materiasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
-            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.materiasToolStripMenuItem.Text = "Materias...";
             // 
             // carrerasToolStripMenuItem
@@ -185,7 +186,7 @@
             this.carrerasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.carrerasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.carrerasToolStripMenuItem.Text = "Carreras...";
             // 
             // estructurasLinealesToolStripMenuItem
@@ -206,7 +207,7 @@
             // 
             this.colaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
@@ -214,20 +215,20 @@
             // 
             this.pilaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(143, 6);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple...";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
@@ -235,14 +236,15 @@
             // 
             this.listaDobleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // estructuraNoLinealesToolStripMenuItem
             // 
             this.estructuraNoLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.árbolBinarioToolStripMenuItem});
+            this.árbolBinarioToolStripMenuItem,
+            this.grafoToolStripMenuItem});
             this.estructuraNoLinealesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.estructuraNoLinealesToolStripMenuItem.Name = "estructuraNoLinealesToolStripMenuItem";
             this.estructuraNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
@@ -264,6 +266,14 @@
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
             // 
+            // grafoToolStripMenuItem
+            // 
+            this.grafoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Text = "Grafo...";
+            this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
@@ -280,7 +290,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras de datos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
             this.mspEdDMLopez.ResumeLayout(false);
             this.mspEdDMLopez.PerformLayout();
             this.ResumeLayout(false);
@@ -313,6 +322,7 @@
         private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem árbolBinarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
     }
 }
 
