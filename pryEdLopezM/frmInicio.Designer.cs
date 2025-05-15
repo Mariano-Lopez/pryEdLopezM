@@ -51,8 +51,9 @@
             this.listaDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructuraNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.árbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarUnaTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspEdDMLopez.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -254,25 +255,34 @@
             // 
             this.árbolBinarioToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.árbolBinarioToolStripMenuItem.Name = "árbolBinarioToolStripMenuItem";
-            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.árbolBinarioToolStripMenuItem.Text = "Árbol binario...";
             this.árbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.árbolBinarioToolStripMenuItem_Click_1);
-            // 
-            // baseDeDatosToolStripMenuItem
-            // 
-            this.baseDeDatosToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.baseDeDatosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
-            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.grafoToolStripMenuItem.Text = "Grafo...";
             this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
+            // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            this.baseDeDatosToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarUnaTablaToolStripMenuItem});
+            this.baseDeDatosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
+            // 
+            // mostrarUnaTablaToolStripMenuItem
+            // 
+            this.mostrarUnaTablaToolStripMenuItem.Name = "mostrarUnaTablaToolStripMenuItem";
+            this.mostrarUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostrarUnaTablaToolStripMenuItem.Text = "Mostrar una tabla...";
+            this.mostrarUnaTablaToolStripMenuItem.Click += new System.EventHandler(this.mostrarUnaTablaToolStripMenuItem_Click);
             // 
             // frmInicio
             // 
@@ -323,6 +333,7 @@
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem árbolBinarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarUnaTablaToolStripMenuItem;
     }
 }
 

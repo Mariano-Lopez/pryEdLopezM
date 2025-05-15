@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvBBDD = new System.Windows.Forms.DataGridView();
+            this.cmbTablas = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMostrar
@@ -41,25 +42,36 @@
             this.btnMostrar.TabIndex = 0;
             this.btnMostrar.Text = "Mostrar datos";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // dataGridView1
+            // dgvBBDD
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 397);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvBBDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBBDD.Location = new System.Drawing.Point(12, 12);
+            this.dgvBBDD.Name = "dgvBBDD";
+            this.dgvBBDD.Size = new System.Drawing.Size(776, 397);
+            this.dgvBBDD.TabIndex = 1;
+            // 
+            // cmbTablas
+            // 
+            this.cmbTablas.FormattingEnabled = true;
+            this.cmbTablas.Location = new System.Drawing.Point(547, 415);
+            this.cmbTablas.Name = "cmbTablas";
+            this.cmbTablas.Size = new System.Drawing.Size(121, 21);
+            this.cmbTablas.TabIndex = 2;
             // 
             // frmMostrarDatosBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cmbTablas);
+            this.Controls.Add(this.dgvBBDD);
             this.Controls.Add(this.btnMostrar);
             this.Name = "frmMostrarDatosBBDD";
             this.Text = "frmMostrarDatosBBDD";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmMostrarDatosBBDD_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -67,6 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBBDD;
+        private System.Windows.Forms.ComboBox cmbTablas;
     }
 }

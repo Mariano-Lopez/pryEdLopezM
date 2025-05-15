@@ -82,5 +82,11 @@ namespace pryEdLopezM
             frmGrafo v = new frmGrafo();
             v.ShowDialog();
         }
+
+        private void mostrarUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarDatosBBDD v = new frmMostrarDatosBBDD();
+            v.ShowDialog();
+        }
     }
 }
