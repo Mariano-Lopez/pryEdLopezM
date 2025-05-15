@@ -85,7 +85,25 @@ namespace pryEdLopezM
 
         private void mostrarUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMostrarDatosBBDD v = new frmMostrarDatosBBDD();
+            frmConsultaTabla v = new frmConsultaTabla();
+            v.ShowDialog();
+        }
+
+        private void consultaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosConsultasSQL v  = new frmBaseDatosConsultasSQL();
+            v.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosOperaciones v = new frmBaseDatosOperaciones();
+            v.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosOperaciones v = new frmBaseDatosOperaciones();
             v.ShowDialog();
         }
     }

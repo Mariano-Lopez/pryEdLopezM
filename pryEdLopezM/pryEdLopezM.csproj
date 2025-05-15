@@ -61,11 +61,35 @@
     <Compile Include="frmArbolBinario.Designer.cs">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaseDatosConsultasSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosConsultasSQL.Designer.cs">
+      <DependentUpon>frmBaseDatosConsultasSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDatosOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosOperaciones.Designer.cs">
+      <DependentUpon>frmBaseDatosOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDatosRespasoOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosRespasoOperaciones.Designer.cs">
+      <DependentUpon>frmBaseDatosRespasoOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaTabla.Designer.cs">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGrafo.cs">
       <SubType>Form</SubType>
@@ -109,12 +133,6 @@
     <Compile Include="frmMeses.Designer.cs">
       <DependentUpon>frmMeses.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMostrarDatosBBDD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMostrarDatosBBDD.Designer.cs">
-      <DependentUpon>frmMostrarDatosBBDD.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +150,20 @@
     <EmbeddedResource Include="frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosConsultasSQL.resx">
+      <DependentUpon>frmBaseDatosConsultasSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosOperaciones.resx">
+      <DependentUpon>frmBaseDatosOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosRespasoOperaciones.resx">
+      <DependentUpon>frmBaseDatosRespasoOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaTabla.resx">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGrafo.resx">
       <DependentUpon>frmGrafo.cs</DependentUpon>
@@ -155,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMeses.resx">
       <DependentUpon>frmMeses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMostrarDatosBBDD.resx">
-      <DependentUpon>frmMostrarDatosBBDD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
