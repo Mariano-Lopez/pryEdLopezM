@@ -34,7 +34,7 @@
             this.btnProMulti = new System.Windows.Forms.Button();
             this.btnProS = new System.Windows.Forms.Button();
             this.mrcOpSelect = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOpSConvo = new System.Windows.Forms.Button();
             this.btnSelecM = new System.Windows.Forms.Button();
             this.btnSelecS = new System.Windows.Forms.Button();
             this.mrcOpAlg = new System.Windows.Forms.GroupBox();
@@ -49,9 +49,18 @@
             // 
             // dgvBBDD
             // 
+            this.dgvBBDD.AllowUserToAddRows = false;
+            this.dgvBBDD.AllowUserToDeleteRows = false;
+            this.dgvBBDD.AllowUserToResizeColumns = false;
+            this.dgvBBDD.AllowUserToResizeRows = false;
+            this.dgvBBDD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBBDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBBDD.Location = new System.Drawing.Point(12, 12);
+            this.dgvBBDD.MultiSelect = false;
             this.dgvBBDD.Name = "dgvBBDD";
+            this.dgvBBDD.ReadOnly = true;
+            this.dgvBBDD.RowHeadersVisible = false;
+            this.dgvBBDD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBBDD.Size = new System.Drawing.Size(755, 263);
             this.dgvBBDD.TabIndex = 0;
             // 
@@ -75,6 +84,7 @@
             this.btnJuntar.TabIndex = 2;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProMulti
             // 
@@ -98,7 +108,7 @@
             // 
             // mrcOpSelect
             // 
-            this.mrcOpSelect.Controls.Add(this.button4);
+            this.mrcOpSelect.Controls.Add(this.btnOpSConvo);
             this.mrcOpSelect.Controls.Add(this.btnSelecM);
             this.mrcOpSelect.Controls.Add(this.btnSelecS);
             this.mrcOpSelect.Location = new System.Drawing.Point(267, 291);
@@ -108,14 +118,15 @@
             this.mrcOpSelect.TabStop = false;
             this.mrcOpSelect.Text = "Operaciones de selección - WHERE";
             // 
-            // button4
+            // btnOpSConvo
             // 
-            this.button4.Location = new System.Drawing.Point(6, 77);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(235, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Selección por convolución";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnOpSConvo.Location = new System.Drawing.Point(6, 77);
+            this.btnOpSConvo.Name = "btnOpSConvo";
+            this.btnOpSConvo.Size = new System.Drawing.Size(235, 23);
+            this.btnOpSConvo.TabIndex = 2;
+            this.btnOpSConvo.Text = "Selección por convolución";
+            this.btnOpSConvo.UseVisualStyleBackColor = true;
+            this.btnOpSConvo.Click += new System.EventHandler(this.btnOpSConvo_Click);
             // 
             // btnSelecM
             // 
@@ -125,6 +136,7 @@
             this.btnSelecM.TabIndex = 1;
             this.btnSelecM.Text = "Selección multiatributo";
             this.btnSelecM.UseVisualStyleBackColor = true;
+            this.btnSelecM.Click += new System.EventHandler(this.btnSelecM_Click);
             // 
             // btnSelecS
             // 
@@ -134,6 +146,7 @@
             this.btnSelecS.TabIndex = 0;
             this.btnSelecS.Text = "Selección simple";
             this.btnSelecS.UseVisualStyleBackColor = true;
+            this.btnSelecS.Click += new System.EventHandler(this.btnSelecS_Click);
             // 
             // mrcOpAlg
             // 
@@ -155,6 +168,7 @@
             this.btnDiferencia.TabIndex = 2;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInter
             // 
@@ -164,6 +178,7 @@
             this.btnInter.TabIndex = 1;
             this.btnInter.Text = "Intersección";
             this.btnInter.UseVisualStyleBackColor = true;
+            this.btnInter.Click += new System.EventHandler(this.btnInter_Click);
             // 
             // btnUnion
             // 
@@ -173,6 +188,7 @@
             this.btnUnion.TabIndex = 0;
             this.btnUnion.Text = "Unión";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBaseDatosOperaciones
             // 
@@ -202,7 +218,7 @@
         private System.Windows.Forms.Button btnJuntar;
         private System.Windows.Forms.Button btnProMulti;
         private System.Windows.Forms.GroupBox mrcOpSelect;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOpSConvo;
         private System.Windows.Forms.Button btnSelecM;
         private System.Windows.Forms.Button btnSelecS;
         private System.Windows.Forms.GroupBox mrcOpAlg;
