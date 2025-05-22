@@ -103,7 +103,7 @@ namespace pryEdLopezM
 
         private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaseDatosOperaciones v = new frmBaseDatosOperaciones();
+            frmBaseDatosRespasoOperaciones v = new frmBaseDatosRespasoOperaciones();
             v.ShowDialog();
         }
     }

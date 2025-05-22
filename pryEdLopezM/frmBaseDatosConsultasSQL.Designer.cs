@@ -37,6 +37,7 @@
             // 
             // txtConsulta
             // 
+            this.txtConsulta.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsulta.Location = new System.Drawing.Point(12, 39);
             this.txtConsulta.Multiline = true;
             this.txtConsulta.Name = "txtConsulta";
@@ -51,6 +52,7 @@
             this.btnListar.TabIndex = 1;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvBBDD
             // 
@@ -81,6 +83,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtConsulta);
             this.Name = "frmBaseDatosConsultasSQL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas en la base de datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).EndInit();
             this.ResumeLayout(false);

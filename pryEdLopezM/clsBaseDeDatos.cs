@@ -7,6 +7,7 @@ using System.Data.OleDb;
 
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryEdLopezM
 {
@@ -67,6 +68,35 @@ namespace pryEdLopezM
                 adaptador = new OleDbDataAdapter(comando);
                 adaptador.Fill(DS, tabla);
                 dgv.DataSource = DS.Tables[tabla];
+
+
+                conexion.Close();
+            }
+            catch (Exception Error)
+            {
+
+                conexion.Close();
+                MessageBox.Show(Error.Message, "Error");
+            }
+
+        }
+
+        public void Listar(DataGridView dgv, string SQL)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = SQL;
+
+                DataSet DS = new DataSet();
+                adaptador = new OleDbDataAdapter(comando);
+                adaptador.Fill(DS, "Tabla");
+                dgv.DataSource = DS.Tables["Tabla"];
 
 
                 conexion.Close();

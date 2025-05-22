@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBBDD = new System.Windows.Forms.DataGridView();
             this.mrcOpPro = new System.Windows.Forms.GroupBox();
-            this.btnProS = new System.Windows.Forms.Button();
-            this.btnProMulti = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
+            this.btnProMulti = new System.Windows.Forms.Button();
+            this.btnProS = new System.Windows.Forms.Button();
             this.mrcOpSelect = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnSelecM = new System.Windows.Forms.Button();
@@ -41,19 +41,19 @@
             this.btnDiferencia = new System.Windows.Forms.Button();
             this.btnInter = new System.Windows.Forms.Button();
             this.btnUnion = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).BeginInit();
             this.mrcOpPro.SuspendLayout();
             this.mrcOpSelect.SuspendLayout();
             this.mrcOpAlg.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvBBDD
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 263);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvBBDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBBDD.Location = new System.Drawing.Point(12, 12);
+            this.dgvBBDD.Name = "dgvBBDD";
+            this.dgvBBDD.Size = new System.Drawing.Size(755, 263);
+            this.dgvBBDD.TabIndex = 0;
             // 
             // mrcOpPro
             // 
@@ -67,14 +67,14 @@
             this.mrcOpPro.TabStop = false;
             this.mrcOpPro.Text = "Operaciones de proyección - SELECT";
             // 
-            // btnProS
+            // btnJuntar
             // 
-            this.btnProS.Location = new System.Drawing.Point(6, 19);
-            this.btnProS.Name = "btnProS";
-            this.btnProS.Size = new System.Drawing.Size(235, 23);
-            this.btnProS.TabIndex = 0;
-            this.btnProS.Text = "Proyección simple";
-            this.btnProS.UseVisualStyleBackColor = true;
+            this.btnJuntar.Location = new System.Drawing.Point(6, 77);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(235, 23);
+            this.btnJuntar.TabIndex = 2;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
             // 
             // btnProMulti
             // 
@@ -84,15 +84,17 @@
             this.btnProMulti.TabIndex = 1;
             this.btnProMulti.Text = "Proyrcción multiatributo";
             this.btnProMulti.UseVisualStyleBackColor = true;
+            this.btnProMulti.Click += new System.EventHandler(this.btnProMulti_Click);
             // 
-            // btnJuntar
+            // btnProS
             // 
-            this.btnJuntar.Location = new System.Drawing.Point(6, 77);
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(235, 23);
-            this.btnJuntar.TabIndex = 2;
-            this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnProS.Location = new System.Drawing.Point(6, 19);
+            this.btnProS.Name = "btnProS";
+            this.btnProS.Size = new System.Drawing.Size(235, 23);
+            this.btnProS.TabIndex = 0;
+            this.btnProS.Text = "Proyección simple";
+            this.btnProS.UseVisualStyleBackColor = true;
+            this.btnProS.Click += new System.EventHandler(this.btnProS_Click);
             // 
             // mrcOpSelect
             // 
@@ -104,7 +106,7 @@
             this.mrcOpSelect.Size = new System.Drawing.Size(247, 110);
             this.mrcOpSelect.TabIndex = 3;
             this.mrcOpSelect.TabStop = false;
-            this.mrcOpSelect.Text = "Operaciones de selección - SELECT";
+            this.mrcOpSelect.Text = "Operaciones de selección - WHERE";
             // 
             // button4
             // 
@@ -180,11 +182,11 @@
             this.Controls.Add(this.mrcOpSelect);
             this.Controls.Add(this.mrcOpAlg);
             this.Controls.Add(this.mrcOpPro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBBDD);
             this.Name = "frmBaseDatosOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de datos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).EndInit();
             this.mrcOpPro.ResumeLayout(false);
             this.mrcOpSelect.ResumeLayout(false);
             this.mrcOpAlg.ResumeLayout(false);
@@ -194,7 +196,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBBDD;
         private System.Windows.Forms.GroupBox mrcOpPro;
         private System.Windows.Forms.Button btnProS;
         private System.Windows.Forms.Button btnJuntar;

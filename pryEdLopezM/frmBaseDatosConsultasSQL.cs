@@ -16,5 +16,14 @@ namespace pryEdLopezM
         {
             InitializeComponent();
         }
+
+        clsBaseDeDatos BBDD = new clsBaseDeDatos();
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            BBDD.Listar(dgvBBDD, txtConsulta.Text);
+
+
+        }
     }
 }

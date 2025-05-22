@@ -17,6 +17,19 @@ namespace pryEdLopezM
             InitializeComponent();
         }
 
-        
+        clsBaseDeDatos BBDD = new clsBaseDeDatos();
+        private void btnProS_Click(object sender, EventArgs e)
+        {
+            string SQL = "SELECT IdAutor FROM Libro";
+
+            BBDD.Listar(dgvBBDD, SQL);
+        }
+
+        private void btnProMulti_Click(object sender, EventArgs e)
+        {
+            string SQL = "SELECT IdAutor, Cantidad FROM Libro";
+
+            BBDD.Listar(dgvBBDD, SQL);
+        }
     }
 }
