@@ -68,14 +68,25 @@ namespace pryEdLopezM
 
         private void btnInter_Click(object sender, EventArgs e)
         {
-            string SQL = @"SELECT IdLibro, Titulo FROM Libro WHERE IdAutor > 10
-                         INTERSEC
-                         SELECT IdLibro, Titulo FROM Libro WHERE IdIdioma > 5";
+            string SQL = @"SELECT * FROM Libro WHERE IdIdioma = 2
+                       AND idLibro in
+                       (SELECT idLibro from Libro where IdPais = 3)
+                       ORDER BY 1 ASC";
             ;
             BBDD.Listar(dgvBBDD, SQL);
         }
 
         private void btnDiferencia_Click(object sender, EventArgs e)
+        {
+            string SQL = @"SELECT * FROM Libro WHERE IdIdioma
+                       NOT IN
+                       (SELECT DISTINCT IdIdioma FROM Libro
+                       WHERE IdIdioma < 5)";
+            ;
+            BBDD.Listar(dgvBBDD, SQL);
+        }
+
+        private void frmBaseDatosOperaciones_Load(object sender, EventArgs e)
         {
 
         }

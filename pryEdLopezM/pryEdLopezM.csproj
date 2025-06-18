@@ -218,6 +218,8 @@
     <Content Include="BBDD\Libreria.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Recursos\Imágenes\ArbolBinario.png" />
+    <Content Include="Recursos\Imágenes\grafo.jpg" />
     <Content Include="Recursos\Imágenes\imgFondo.jpg" />
   </ItemGroup>
   <ItemGroup />

@@ -20,7 +20,7 @@ namespace pryEdLopezM
 
         private String CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\BBDD\\Libreria.mdb";
         //private String CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\\Escritorio\\clones\\pryEdLopezM\\BBDD\\Libreria.mdb";
-        private String CadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
+        //private String CadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
 
         public void Listar(DataGridView dgv)
         {

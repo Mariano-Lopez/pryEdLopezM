@@ -213,7 +213,7 @@
             // 
             this.colaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
@@ -221,20 +221,20 @@
             // 
             this.pilaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(143, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple...";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
@@ -242,7 +242,7 @@
             // 
             this.listaDobleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
@@ -260,7 +260,7 @@
             // 
             this.árbolBinarioToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.árbolBinarioToolStripMenuItem.Name = "árbolBinarioToolStripMenuItem";
-            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.árbolBinarioToolStripMenuItem.Text = "Árbol binario...";
             this.árbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.árbolBinarioToolStripMenuItem_Click_1);
             // 
@@ -268,12 +268,13 @@
             // 
             this.grafoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.grafoToolStripMenuItem.Text = "Grafo...";
             this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
             // 
             // baseDeDatosToolStripMenuItem
             // 
+            this.baseDeDatosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.baseDeDatosToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarUnaTablaToolStripMenuItem,
@@ -289,6 +290,7 @@
             // 
             // mostrarUnaTablaToolStripMenuItem
             // 
+            this.mostrarUnaTablaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.mostrarUnaTablaToolStripMenuItem.Name = "mostrarUnaTablaToolStripMenuItem";
             this.mostrarUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.mostrarUnaTablaToolStripMenuItem.Text = "Consulta de una tabla...";
@@ -301,6 +303,7 @@
             // 
             // consultaDeToolStripMenuItem
             // 
+            this.consultaDeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.consultaDeToolStripMenuItem.Name = "consultaDeToolStripMenuItem";
             this.consultaDeToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.consultaDeToolStripMenuItem.Text = "Consulta de base de datos...";
@@ -308,6 +311,7 @@
             // 
             // operacionesEnBaseDeDatosToolStripMenuItem
             // 
+            this.operacionesEnBaseDeDatosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.operacionesEnBaseDeDatosToolStripMenuItem.Name = "operacionesEnBaseDeDatosToolStripMenuItem";
             this.operacionesEnBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.operacionesEnBaseDeDatosToolStripMenuItem.Text = "Operaciones en base de datos...";
@@ -320,6 +324,7 @@
             // 
             // consultasVariasConOperacionesToolStripMenuItem
             // 
+            this.consultasVariasConOperacionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.consultasVariasConOperacionesToolStripMenuItem.Name = "consultasVariasConOperacionesToolStripMenuItem";
             this.consultasVariasConOperacionesToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.consultasVariasConOperacionesToolStripMenuItem.Text = "Consultas varias con operaciones...";

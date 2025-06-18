@@ -194,6 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(779, 415);
             this.Controls.Add(this.mrcOpSelect);
             this.Controls.Add(this.mrcOpAlg);
@@ -202,6 +203,7 @@
             this.Name = "frmBaseDatosOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de datos";
+            this.Load += new System.EventHandler(this.frmBaseDatosOperaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBBDD)).EndInit();
             this.mrcOpPro.ResumeLayout(false);
             this.mrcOpSelect.ResumeLayout(false);

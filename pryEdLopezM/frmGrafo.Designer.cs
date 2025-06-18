@@ -28,9 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGrafo));
             this.imgGrafo = new System.Windows.Forms.PictureBox();
             this.mrcConsultarDatos = new System.Windows.Forms.GroupBox();
+            this.btnCargarD = new System.Windows.Forms.Button();
+            this.btnBorrarTodoD = new System.Windows.Forms.Button();
+            this.txtPrecioD = new System.Windows.Forms.TextBox();
+            this.cmbOrigenD = new System.Windows.Forms.ComboBox();
+            this.cmbDestinoD = new System.Windows.Forms.ComboBox();
+            this.lblDestinoD = new System.Windows.Forms.Label();
+            this.lblPrecioD = new System.Windows.Forms.Label();
+            this.lblOrigenD = new System.Windows.Forms.Label();
             this.mrcCargaDeDatos = new System.Windows.Forms.GroupBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.btnBorrarTodo = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cmbOrigen = new System.Windows.Forms.ComboBox();
@@ -47,15 +57,6 @@
             this.cmbDesde = new System.Windows.Forms.ComboBox();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dgvGrafo = new System.Windows.Forms.DataGridView();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnCargarD = new System.Windows.Forms.Button();
-            this.btnBorrarTodoD = new System.Windows.Forms.Button();
-            this.txtPrecioD = new System.Windows.Forms.TextBox();
-            this.cmbOrigenD = new System.Windows.Forms.ComboBox();
-            this.cmbDestinoD = new System.Windows.Forms.ComboBox();
-            this.lblDestinoD = new System.Windows.Forms.Label();
-            this.lblPrecioD = new System.Windows.Forms.Label();
-            this.lblOrigenD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgGrafo)).BeginInit();
             this.mrcConsultarDatos.SuspendLayout();
             this.mrcCargaDeDatos.SuspendLayout();
@@ -65,9 +66,11 @@
             // 
             // imgGrafo
             // 
+            this.imgGrafo.Image = ((System.Drawing.Image)(resources.GetObject("imgGrafo.Image")));
             this.imgGrafo.Location = new System.Drawing.Point(31, 28);
             this.imgGrafo.Name = "imgGrafo";
             this.imgGrafo.Size = new System.Drawing.Size(205, 148);
+            this.imgGrafo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgGrafo.TabIndex = 0;
             this.imgGrafo.TabStop = false;
             // 
@@ -88,6 +91,76 @@
             this.mrcConsultarDatos.TabStop = false;
             this.mrcConsultarDatos.Text = "Consultar datos";
             // 
+            // btnCargarD
+            // 
+            this.btnCargarD.Location = new System.Drawing.Point(156, 105);
+            this.btnCargarD.Name = "btnCargarD";
+            this.btnCargarD.Size = new System.Drawing.Size(75, 23);
+            this.btnCargarD.TabIndex = 23;
+            this.btnCargarD.Text = "Cargar";
+            this.btnCargarD.UseVisualStyleBackColor = true;
+            // 
+            // btnBorrarTodoD
+            // 
+            this.btnBorrarTodoD.Location = new System.Drawing.Point(29, 105);
+            this.btnBorrarTodoD.Name = "btnBorrarTodoD";
+            this.btnBorrarTodoD.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarTodoD.TabIndex = 22;
+            this.btnBorrarTodoD.Text = "Borrar todo";
+            this.btnBorrarTodoD.UseVisualStyleBackColor = true;
+            // 
+            // txtPrecioD
+            // 
+            this.txtPrecioD.Location = new System.Drawing.Point(66, 75);
+            this.txtPrecioD.Name = "txtPrecioD";
+            this.txtPrecioD.Size = new System.Drawing.Size(121, 20);
+            this.txtPrecioD.TabIndex = 21;
+            // 
+            // cmbOrigenD
+            // 
+            this.cmbOrigenD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOrigenD.FormattingEnabled = true;
+            this.cmbOrigenD.Location = new System.Drawing.Point(66, 21);
+            this.cmbOrigenD.Name = "cmbOrigenD";
+            this.cmbOrigenD.Size = new System.Drawing.Size(121, 21);
+            this.cmbOrigenD.TabIndex = 20;
+            // 
+            // cmbDestinoD
+            // 
+            this.cmbDestinoD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDestinoD.FormattingEnabled = true;
+            this.cmbDestinoD.Location = new System.Drawing.Point(66, 48);
+            this.cmbDestinoD.Name = "cmbDestinoD";
+            this.cmbDestinoD.Size = new System.Drawing.Size(121, 21);
+            this.cmbDestinoD.TabIndex = 19;
+            // 
+            // lblDestinoD
+            // 
+            this.lblDestinoD.AutoSize = true;
+            this.lblDestinoD.Location = new System.Drawing.Point(22, 51);
+            this.lblDestinoD.Name = "lblDestinoD";
+            this.lblDestinoD.Size = new System.Drawing.Size(46, 13);
+            this.lblDestinoD.TabIndex = 18;
+            this.lblDestinoD.Text = "Destino:";
+            // 
+            // lblPrecioD
+            // 
+            this.lblPrecioD.AutoSize = true;
+            this.lblPrecioD.Location = new System.Drawing.Point(22, 79);
+            this.lblPrecioD.Name = "lblPrecioD";
+            this.lblPrecioD.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecioD.TabIndex = 17;
+            this.lblPrecioD.Text = "Precio:";
+            // 
+            // lblOrigenD
+            // 
+            this.lblOrigenD.AutoSize = true;
+            this.lblOrigenD.Location = new System.Drawing.Point(22, 24);
+            this.lblOrigenD.Name = "lblOrigenD";
+            this.lblOrigenD.Size = new System.Drawing.Size(41, 13);
+            this.lblOrigenD.TabIndex = 16;
+            this.lblOrigenD.Text = "Origen:";
+            // 
             // mrcCargaDeDatos
             // 
             this.mrcCargaDeDatos.Controls.Add(this.btnCargar);
@@ -104,6 +177,16 @@
             this.mrcCargaDeDatos.TabIndex = 0;
             this.mrcCargaDeDatos.TabStop = false;
             this.mrcCargaDeDatos.Text = "Carga de datos";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(143, 107);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 15;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnBorrarTodo
             // 
@@ -254,97 +337,19 @@
             this.dgvGrafo.Size = new System.Drawing.Size(761, 250);
             this.dgvGrafo.TabIndex = 0;
             // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(143, 107);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 15;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnCargarD
-            // 
-            this.btnCargarD.Location = new System.Drawing.Point(156, 105);
-            this.btnCargarD.Name = "btnCargarD";
-            this.btnCargarD.Size = new System.Drawing.Size(75, 23);
-            this.btnCargarD.TabIndex = 23;
-            this.btnCargarD.Text = "Cargar";
-            this.btnCargarD.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrarTodoD
-            // 
-            this.btnBorrarTodoD.Location = new System.Drawing.Point(29, 105);
-            this.btnBorrarTodoD.Name = "btnBorrarTodoD";
-            this.btnBorrarTodoD.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrarTodoD.TabIndex = 22;
-            this.btnBorrarTodoD.Text = "Borrar todo";
-            this.btnBorrarTodoD.UseVisualStyleBackColor = true;
-            // 
-            // txtPrecioD
-            // 
-            this.txtPrecioD.Location = new System.Drawing.Point(66, 75);
-            this.txtPrecioD.Name = "txtPrecioD";
-            this.txtPrecioD.Size = new System.Drawing.Size(121, 20);
-            this.txtPrecioD.TabIndex = 21;
-            // 
-            // cmbOrigenD
-            // 
-            this.cmbOrigenD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOrigenD.FormattingEnabled = true;
-            this.cmbOrigenD.Location = new System.Drawing.Point(66, 21);
-            this.cmbOrigenD.Name = "cmbOrigenD";
-            this.cmbOrigenD.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrigenD.TabIndex = 20;
-            // 
-            // cmbDestinoD
-            // 
-            this.cmbDestinoD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDestinoD.FormattingEnabled = true;
-            this.cmbDestinoD.Location = new System.Drawing.Point(66, 48);
-            this.cmbDestinoD.Name = "cmbDestinoD";
-            this.cmbDestinoD.Size = new System.Drawing.Size(121, 21);
-            this.cmbDestinoD.TabIndex = 19;
-            // 
-            // lblDestinoD
-            // 
-            this.lblDestinoD.AutoSize = true;
-            this.lblDestinoD.Location = new System.Drawing.Point(22, 51);
-            this.lblDestinoD.Name = "lblDestinoD";
-            this.lblDestinoD.Size = new System.Drawing.Size(46, 13);
-            this.lblDestinoD.TabIndex = 18;
-            this.lblDestinoD.Text = "Destino:";
-            // 
-            // lblPrecioD
-            // 
-            this.lblPrecioD.AutoSize = true;
-            this.lblPrecioD.Location = new System.Drawing.Point(22, 79);
-            this.lblPrecioD.Name = "lblPrecioD";
-            this.lblPrecioD.Size = new System.Drawing.Size(40, 13);
-            this.lblPrecioD.TabIndex = 17;
-            this.lblPrecioD.Text = "Precio:";
-            // 
-            // lblOrigenD
-            // 
-            this.lblOrigenD.AutoSize = true;
-            this.lblOrigenD.Location = new System.Drawing.Point(22, 24);
-            this.lblOrigenD.Name = "lblOrigenD";
-            this.lblOrigenD.Size = new System.Drawing.Size(41, 13);
-            this.lblOrigenD.TabIndex = 16;
-            this.lblOrigenD.Text = "Origen:";
-            // 
             // frmGrafo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(835, 527);
             this.Controls.Add(this.mrcListarViajes);
             this.Controls.Add(this.mrcConsultarDatos);
             this.Controls.Add(this.mrcCargaDeDatos);
             this.Controls.Add(this.imgGrafo);
             this.Name = "frmGrafo";
-            this.Text = "frmGrafo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Estructura no lineal - Grafo";
             this.Load += new System.EventHandler(this.frmGrafo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgGrafo)).EndInit();
             this.mrcConsultarDatos.ResumeLayout(false);
